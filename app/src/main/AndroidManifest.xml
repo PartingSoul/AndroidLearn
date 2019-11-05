@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.parting_soul.learn">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name="com.parting_soul.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layoutinflater.redbook.RedBookSplashActivity"
+            android:theme="@style/red_book_splash" />
+        <activity android:name=".layoutinflater.skinning.SkinningActivity" />
+        <activity android:name=".nestscroll.NestedScrollingActivity" />
+        <activity android:name=".viewdraw.customview.FlowLayoutActivity" />
+        <activity android:name=".viewdraw.customview.FrameLayoutActivity" />
+        <activity android:name=".viewdraw.customview.LinearLayoutActivity" />
+
+    </application>
+
+</manifest>

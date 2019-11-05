@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">base</string>
+    <string name="album">相册</string>
+    <string name="cancel">取消</string>
+    <string name="camera">照相机</string>
+    <string name="go_to_settings">去设置</string>
+    <string name="permission_request_failed">权限请求失败,请重试</string>
+    <string name="ok">确定</string>
+    <string name="object_key">web/%1$s.jpg</string>
+</resources>

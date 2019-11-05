@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlNormalTop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingBottom="8dp"
+    android:visibility="visible">
+
+    <View
+        android:id="@+id/statusBarBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#30000000" />
+
+    <ImageView
+        android:id="@+id/ivNormalBack"
+        android:layout_width="40dip"
+        android:layout_height="30dp"
+        android:layout_below="@id/statusBarBackgroundView"
+        android:paddingLeft="20dip"
+        android:paddingTop="@dimen/space_8dp"
+        android:paddingRight="10dip"
+        android:src="@mipmap/tab_go_back" />
+
+
+    <LinearLayout
+        android:id="@+id/llNormalShare"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/statusBarBackgroundView"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/space_8dp">
+
+        <ImageView
+            android:id="@+id/ivNormalWxFriendShare"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/recipe_wetchat" />
+
+        <ImageView
+            android:id="@+id/ivNormalWxMomentShare"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="@dimen/space_20dp"
+            android:src="@mipmap/recipe_moments" />
+
+
+        <ImageView
+            android:id="@+id/ivNormalMoreShare"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:src="@mipmap/recipe_share" />
+    </LinearLayout>
+
+</RelativeLayout>

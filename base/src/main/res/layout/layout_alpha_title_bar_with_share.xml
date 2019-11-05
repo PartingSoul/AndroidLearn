@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlTopNormal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_95000000_00000000"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/ivAlphaBack"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="@dimen/space_8dp"
+        android:paddingRight="15dp"
+        android:src="@mipmap/album_main_back" />
+
+    <LinearLayout
+        android:id="@+id/llAlphaShare"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/space_8dp">
+
+        <ImageView
+            android:id="@+id/ivAlphaWxFriendShare"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="24dp"
+            android:background="@mipmap/album_main_wechat" />
+
+        <ImageView
+            android:id="@+id/ivAlphaWxMomentShare"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="@dimen/space_20dp"
+            android:background="@mipmap/album_main_pyq" />
+
+        <ImageView
+            android:id="@+id/ivAlphaMoreShare"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@mipmap/album_main_more" />
+    </LinearLayout>
+</RelativeLayout>

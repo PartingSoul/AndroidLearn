@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBar">
+        <attr name="title" format="string" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleTypeFace" format="enum">
+            <enum name="siyuansongti" value="1" />
+        </attr>
+
+        <attr name="rightText" format="string" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="rightTextColor" format="color" />
+
+        <attr name="enableRightText" format="boolean" />
+        <attr name="enableBack" format="boolean" />
+        <attr name="showBottomLine" format="boolean" />
+        <attr name="leftImageRes" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/layout_bg_color"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mToolBar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:textColor="@color/normal_text_color"
+        android:gravity="center"
+        android:text="文本1"
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40" />
+
+    <TextView
+        android:textColor="@color/normal_text_color"
+        android:gravity="center"
+        android:text="文本2"
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40" />
+
+    <TextView
+        android:textColor="@color/normal_text_color"
+        android:gravity="center"
+        android:text="文本3"
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40" />
+
+    <TextView
+        android:textColor="@color/normal_text_color"
+        android:gravity="center"
+        android:text="文本4"
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_70dp">
+
+        <TextView
+            android:textColor="@color/normal_text_color"
+            android:id="@+id/tv5"
+            android:text="ff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:textColor="@color/normal_text_color"
+        android:onClick="changeSkin"
+        android:text="换肤"
+        android:id="@+id/bt_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

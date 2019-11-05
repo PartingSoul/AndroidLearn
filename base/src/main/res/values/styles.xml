@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="BaseTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="BaseMainTheme" parent="BaseTheme">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- 当我们从 A1 启动 A2 时，A2 出现在屏幕上 -->
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <!-- 当我们从 A1 启动 A2 时，A1 从屏幕上消失 -->
+        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+
+        <!-- 当我们从 A2 退出回到 A1 时，A1 出现在屏幕上 -->
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+        <!-- 当我们从 A2 退出回到 A1 时，A2 从屏幕上消失 -->
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+    </style>
+
+    <style name="NormalDialogStyle" parent="android:style/Theme.Dialog">
+        <!--对话框背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+
+        <!--&lt;!&ndash;以下属性可不设置&ndash;&gt;-->
+        <!--&lt;!&ndash;背景透明 &ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--&lt;!&ndash; 是否有覆盖 &ndash;&gt;-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--进出的显示动画-->
+        <!--<item name="android:windowAnimationStyle">@style/normalDialogAnim</item>-->
+    </style>
+
+    <!--对话框动画-->
+    <style name="bottomDialogAnim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_bottom_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_bottom_dialog_exit</item>
+    </style>
+
+
+    <declare-styleable name="ImageTextView">
+        <attr name="imageOrientation">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="imageRes" format="reference" />
+        <attr name="imageCheckRes" format="reference" />
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+
+        <attr name="textNormalColor" format="color" />
+        <attr name="textCheckColor" format="color" />
+        <attr name="textNormalSize" format="float" />
+        <attr name="textNormal" format="string" />
+        <attr name="textCheck" format="string" />
+
+        <attr name="imageTextPadding" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

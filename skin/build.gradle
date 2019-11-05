@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+
+    defaultConfig {
+        applicationId "com.parting_soul.skin"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        darkSkin {
+            manifest.srcFile 'src/drak_skin/AndroidManifest.xml'
+            res.srcDir 'src/drak_skin/res'
+        }
+
+        //红色模式
+        redSkin {
+            manifest.srcFile 'src/red_skin/AndroidManifest.xml'
+            res.srcDir 'src/red_skin/res'
+        }
+    }
+
+    productFlavors {
+        flavorDimensions "default"
+
+        //暗黑模式
+        darkSkin {
+        }
+
+        //红色模式
+        redSkin {
+        }
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def productFlavor = variant.productFlavors[0]
+            outputFileName = "${productFlavor.getName()}.skin"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}

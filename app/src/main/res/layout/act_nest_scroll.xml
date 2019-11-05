@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.parting_soul.learn.nestscroll.view.LinearLayoutNormalParent xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_top" />
+
+    <TextView
+        android:id="@+id/tv_float"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_40dp"
+        android:layout_below="@id/iv_top"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:text="置顶悬浮" />
+
+
+    <com.parting_soul.learn.nestscroll.view.LinearLayoutNormalChild
+        android:id="@+id/ll_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_float">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg"
+            android:textSize="@dimen/text_size_16sp" />
+    </com.parting_soul.learn.nestscroll.view.LinearLayoutNormalChild>
+
+
+    <LinearLayout
+        android:id="@+id/ll_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.parting_soul.support.widget.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/dark_blue" />
+
+        <com.parting_soul.support.widget.TitleBar
+            android:id="@+id/mTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40dp"
+            android:background="@color/colorPrimary"
+            app:leftImageRes="@mipmap/back_white"
+            app:showBottomLine="false"
+            app:title="标题"
+            app:titleColor="#ffffff" />
+    </LinearLayout>
+
+
+</com.parting_soul.learn.nestscroll.view.LinearLayoutNormalParent>

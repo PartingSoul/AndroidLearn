@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">学无止境</string>
+    <string name="msg">This interface should be implemented by ViewGroup subclasses that wish to support scrolling operations delegated by a nested child view.
+
+Classes implementing this interface should create a final instance of a NestedScrollingParentHelper as a field and delegate any View or ViewGroup methods to the NestedScrollingParentHelper methods of the same signature.
+
+Views invoking nested scrolling functionality should always do so from the relevant ViewCompat, ViewGroupCompat or ViewParentCompat compatibility shim static methods. This ensures interoperability with nested scrolling views on Android 5.0 Lollipop and newer.
+
+    This interface should be implemented by ViewGroup subclasses that wish to support scrolling operations delegated by a nested child view.
+
+Classes implementing this interface should create a final instance of a NestedScrollingParentHelper as a field and delegate any View or ViewGroup methods to the NestedScrollingParentHelper methods of the same signature.
+
+Views invoking nested scrolling functionality should always do so from the relevant ViewCompat, ViewGroupCompat or ViewParentCompat compatibility shim static methods. This ensures interoperability with nested scrolling views on Android 5.0 Lollipop and newer.
+
+    This interface should be implemented by ViewGroup subclasses that wish to support scrolling operations delegated by a nested child view.
+
+Classes implementing this interface should create a final instance of a NestedScrollingParentHelper as a field and delegate any View or ViewGroup methods to the NestedScrollingParentHelper methods of the same signature.
+
+Views invoking nested scrolling functionality should always do so from the relevant ViewCompat, ViewGroupCompat or ViewParentCompat compatibility shim static methods. This ensures interoperability with nested scrolling views on Android 5.0 Lollipop and newer.
+
+    This interface should be implemented by ViewGroup subclasses that wish to support scrolling operations delegated by a nested child view.
+
+Classes implementing this interface should create a final instance of a NestedScrollingParentHelper as a field and delegate any View or ViewGroup methods to the NestedScrollingParentHelper methods of the same signature.
+
+Views invoking nested s
+    </string>
+</resources>
