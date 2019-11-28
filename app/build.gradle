@@ -1,15 +1,26 @@
 apply plugin: 'com.android.application'
 
+def appVersion = rootProject.ext.appVersion
+def supportDependencies = rootProject.ext.dependencies
+def supportAnnotationProcessor = rootProject.ext.annotationProcessor
+
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    compileSdkVersion appVersion.compileSdkVersion
+    buildToolsVersion appVersion.buildToolsVersion
     defaultConfig {
         applicationId "com.parting_soul.learn"
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion appVersion.minSdkVersion
+        targetSdkVersion appVersion.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        // 在gradle文件中配置选项参数信息(用于APT传参)，必须写在defaultConfig节点下
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = ['content': 'hellp apt']
+//            }
+//        }
     }
     buildTypes {
         release {
@@ -26,17 +37,18 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation project(path: ':base')
+    implementation project(':annotation')
+    annotationProcessor project(':compiler')
 
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'androidx.cardview:cardview:1.0.0'
+
+    supportDependencies.each {
+        k, v -> implementation v
+    }
+
+    supportAnnotationProcessor.each {
+        k, v -> annotationProcessor v
+    }
+
 }

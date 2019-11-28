@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseSectionQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.parting_soul.annotation.Hello;
+import com.parting_soul.annotation.Test;
 import com.parting_soul.base.AbstractActivity;
+import com.parting_soul.learn.apt.AptActivity;
 import com.parting_soul.learn.bean.Item;
 import com.parting_soul.learn.layoutinflater.redbook.RedBookSplashActivity;
 import com.parting_soul.learn.layoutinflater.skinning.SkinManager;
@@ -25,7 +28,9 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class MainActivity extends AbstractActivity implements BaseSectionQuickAdapter.OnItemClickListener {
+@Hello
+@Test
+public  class MainActivity extends AbstractActivity implements BaseSectionQuickAdapter.OnItemClickListener {
 
     @BindView(R.id.mRv)
     RecyclerView mRv;
@@ -93,6 +98,7 @@ public class MainActivity extends AbstractActivity implements BaseSectionQuickAd
         mLists.add(new Item("自定义LinearLayout", LinearLayoutActivity.class));
         mLists.add(new Item(true, "NestedScrolling"));
         mLists.add(new Item("基本使用", NestedScrollingActivity.class));
+        mLists.add(new Item("APT", AptActivity.class));
     }
 
     @Override

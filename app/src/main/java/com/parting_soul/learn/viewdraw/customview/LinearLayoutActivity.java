@@ -16,12 +16,10 @@ public class LinearLayoutActivity extends AbstractActivity {
 
     @Override
     protected void initData() {
-
     }
 
     @Override
     protected void initView() {
-
     }
 
 }

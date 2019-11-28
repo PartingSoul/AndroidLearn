@@ -32,6 +32,7 @@
         <activity android:name=".viewdraw.customview.FlowLayoutActivity" />
         <activity android:name=".viewdraw.customview.FrameLayoutActivity" />
         <activity android:name=".viewdraw.customview.LinearLayoutActivity" />
+        <activity android:name=".apt.AptActivity" />
 
     </application>
 

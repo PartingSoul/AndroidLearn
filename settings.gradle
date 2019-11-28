@@ -1,2 +1,2 @@
-include ':app', ':base', ':skin'
+include ':app', ':base', ':skin', ':compiler', ':annotation'
 rootProject.name='AndroidLearn'

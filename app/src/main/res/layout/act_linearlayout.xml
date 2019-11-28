@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:divider="@drawable/shape_linear_divider"
+    android:dividerPadding="@dimen/space_20dp"
     android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/shape_linear_divider"
+        android:dividerPadding="@dimen/dp_10"
+        android:orientation="vertical"
+        android:showDividers="beginning|middle|end">
+
+        <TextView
+            android:layout_weight="1"
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="1" />
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="2" />
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="3" />
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="4" />
+
+    </LinearLayout>
+
+    <com.parting_soul.learn.viewdraw.customview.view.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0dp"
+        android:layout_weight="1"
+        app:c_orientation="vertical"
+        app:c_divider="@drawable/shape_linear_divider"
+        app:c_dividerPadding="@dimen/dp_10"
+        app:c_showDividers="beginning|middle|end">
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="1" />
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="2" />
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="3" />
+
+        <TextView
+            style="@style/style_normal_textView"
+            android:layout_margin="@dimen/dp_10"
+            android:text="4" />
+
+    </com.parting_soul.learn.viewdraw.customview.view.LinearLayout>
+
 
 </LinearLayout>

@@ -9,8 +9,18 @@
         <attr name="y_out" format="float" />
     </declare-styleable>
 
-<!--    <declare-styleable name="Skinning">-->
-<!--        <attr name="skinColor" format="color" />-->
-<!--        <attr name="text" format="float" />-->
-<!--    </declare-styleable>-->
+    <declare-styleable name="LinearLayout">
+        <attr name="c_showDividers">
+            <flag name="none" value="0" />
+            <flag name="beginning" value="1" />
+            <flag name="middle" value="2" />
+            <flag name="end" value="4" />
+        </attr>
+        <attr name="c_divider" format="reference" />
+        <attr name="c_dividerPadding" format="dimension" />
+        <attr name="c_orientation">
+            <enum name="horizontal" value="0"></enum>
+            <enum name="vertical" value="1"></enum>
+        </attr>
+    </declare-styleable>
 </resources>
