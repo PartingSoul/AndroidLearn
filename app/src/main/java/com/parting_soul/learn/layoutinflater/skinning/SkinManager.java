@@ -3,6 +3,7 @@ package com.parting_soul.learn.layoutinflater.skinning;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.parting_soul.learn.apt.AptActivity;
 import com.parting_soul.support.utils.LogUtils;
 import com.parting_soul.support.utils.SPUtil;
 
@@ -50,6 +52,9 @@ public class SkinManager {
     private SkinManager() {
     }
 
+    int count = 0;
+    boolean isAppFromBack;
+
     /**
      * 在Application 中初始化
      *
@@ -66,8 +71,15 @@ public class SkinManager {
 
             @Override
             public void onActivityStarted(@NonNull Activity activity) {
-                LogUtils.e("");
+                LogUtils.e("ac " + activity);
                 loadSkin(activity);
+                count++;
+                if (isAppFromBack) {
+                    LogUtils.e("back");
+//                    Intent intent = new Intent(activity, AptActivity.class);
+//                    activity.startActivity(intent);
+                }
+                isAppFromBack = false;
             }
 
             @Override
@@ -82,7 +94,11 @@ public class SkinManager {
 
             @Override
             public void onActivityStopped(@NonNull Activity activity) {
-
+                count--;
+                if (count <= 0) {
+                    isAppFromBack = true;
+                    count = 0;
+                }
             }
 
             @Override

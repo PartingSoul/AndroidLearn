@@ -12,5 +12,9 @@
 
 #### 2.2 自定义FrameLayout
 
-### [3. APT入门]([https://partingsoul.github.io/2019/11/26/APT%E6%8A%80%E6%9C%AF/](https://partingsoul.github.io/2019/11/26/APT技术/))
+### [3. APT入门](./笔记/2019-11-26-APT技术.md)
+
+### 4. 其他
+
+#### [4.1 Activity注意点](./笔记/2019-12-27-Activity注意点.md)
 

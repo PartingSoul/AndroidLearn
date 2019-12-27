@@ -1,6 +1,7 @@
 package com.parting_soul.learn;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -30,7 +31,7 @@ import butterknife.BindView;
 
 @Hello
 @Test
-public  class MainActivity extends AbstractActivity implements BaseSectionQuickAdapter.OnItemClickListener {
+public class MainActivity extends AbstractActivity implements BaseSectionQuickAdapter.OnItemClickListener {
 
     @BindView(R.id.mRv)
     RecyclerView mRv;
@@ -51,6 +52,7 @@ public  class MainActivity extends AbstractActivity implements BaseSectionQuickA
 
     @Override
     protected void initData() {
+        Log.i("ACTIVITY_TAG", "taskAffinity:" + getTaskId());
     }
 
     @Override
@@ -99,6 +101,8 @@ public  class MainActivity extends AbstractActivity implements BaseSectionQuickA
         mLists.add(new Item(true, "NestedScrolling"));
         mLists.add(new Item("基本使用", NestedScrollingActivity.class));
         mLists.add(new Item("APT", AptActivity.class));
+        mLists.add(new Item(true, "其他"));
+        mLists.add(new Item("Activity注意点", CommonActivity.class));
     }
 
     @Override

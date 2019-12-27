@@ -1,7 +1,6 @@
 package com.parting_soul.learn;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -13,14 +12,12 @@ import androidx.annotation.Nullable;
  * @author parting_soul
  * @date 2019-10-17
  */
-public class ActivityOne extends Activity {
+public class ActivityTwo extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_common);
+        setContentView(R.layout.act_splash);
         dumpTaskAffinity();
-
-//        startActivity(new Intent(this, ActivityTwo.class));
     }
 
     @Override
@@ -75,7 +72,7 @@ public class ActivityOne extends Activity {
         try {
             ActivityInfo info = this.getPackageManager()
                     .getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
-            Log.i("ACTIVITY_TAG ONE", "taskAffinity:" + info.taskAffinity + " " + getTaskId());
+            Log.i("ACTIVITY_TAG TWO", "taskAffinity:" + info.taskAffinity + " " + getTaskId());
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
