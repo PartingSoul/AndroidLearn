@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.parting_soul.learn.viewdraw.customview.view.HorizontalScrollView
+        android:id="@+id/horizontalScrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/default_pink"
+        android:padding="@dimen/space_5dp" />
+
+    <com.parting_soul.learn.viewdraw.customview.view.HorizontalScrollView
+        android:id="@+id/hsv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/space_20dp" />
+</LinearLayout>

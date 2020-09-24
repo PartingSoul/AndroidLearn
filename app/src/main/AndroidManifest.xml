@@ -47,6 +47,7 @@
             android:name=".ActivityOne"
             android:launchMode="singleInstance" />
         <activity android:name=".ActivityTwo" />
+        <activity android:name=".viewdraw.customview.HorizontalScrollViewActivity" />
 
     </application>
 

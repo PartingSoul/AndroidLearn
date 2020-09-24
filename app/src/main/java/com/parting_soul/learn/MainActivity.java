@@ -22,6 +22,7 @@ import com.parting_soul.learn.layoutinflater.skinning.SkinningActivity;
 import com.parting_soul.learn.nestscroll.NestedScrollingActivity;
 import com.parting_soul.learn.viewdraw.customview.FlowLayoutActivity;
 import com.parting_soul.learn.viewdraw.customview.FrameLayoutActivity;
+import com.parting_soul.learn.viewdraw.customview.HorizontalScrollViewActivity;
 import com.parting_soul.learn.viewdraw.customview.LinearLayoutActivity;
 
 import java.util.ArrayList;
@@ -95,6 +96,7 @@ public class MainActivity extends AbstractActivity implements BaseSectionQuickAd
         mLists.add(new Item("仿小红书开屏", RedBookSplashActivity.class));
         mLists.add(new Item("换肤", SkinningActivity.class));
         mLists.add(new Item(true, "View绘制"));
+        mLists.add(new Item("自定义HorizontalScrollView", HorizontalScrollViewActivity.class));
         mLists.add(new Item("自定义FlowLayout", FlowLayoutActivity.class));
         mLists.add(new Item("自定义FrameLayout", FrameLayoutActivity.class));
         mLists.add(new Item("自定义LinearLayout", LinearLayoutActivity.class));
