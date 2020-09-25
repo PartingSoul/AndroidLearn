@@ -24,6 +24,7 @@ import com.parting_soul.learn.viewdraw.customview.FlowLayoutActivity;
 import com.parting_soul.learn.viewdraw.customview.FrameLayoutActivity;
 import com.parting_soul.learn.viewdraw.customview.HorizontalScrollViewActivity;
 import com.parting_soul.learn.viewdraw.customview.LinearLayoutActivity;
+import com.parting_soul.learn.viewdraw.customview.sticky.StickyNavLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,6 +98,7 @@ public class MainActivity extends AbstractActivity implements BaseSectionQuickAd
         mLists.add(new Item("换肤", SkinningActivity.class));
         mLists.add(new Item(true, "View绘制"));
         mLists.add(new Item("自定义HorizontalScrollView", HorizontalScrollViewActivity.class));
+        mLists.add(new Item("仿应用市场详情页", StickyNavLayoutActivity.class));
         mLists.add(new Item("自定义FlowLayout", FlowLayoutActivity.class));
         mLists.add(new Item("自定义FrameLayout", FrameLayoutActivity.class));
         mLists.add(new Item("自定义LinearLayout", LinearLayoutActivity.class));

@@ -145,12 +145,13 @@ public class HorizontalScrollView extends ViewGroup {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if (mIsBeingDragged = !mScroller.isFinished()) {
+                if (!mScroller.isFinished()) {
                     mScroller.abortAnimation();
                 }
                 mDownX = (int) ev.getX();
                 mDownY = (int) ev.getY();
                 mLastX = (int) ev.getX();
+                mIsBeingDragged = false;
                 break;
             case MotionEvent.ACTION_MOVE:
                 int delaX = (int) Math.abs(mDownX - ev.getX());
@@ -173,10 +174,11 @@ public class HorizontalScrollView extends ViewGroup {
         mVelocityTracker.addMovement(event);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if (mIsBeingDragged = !mScroller.isFinished()) {
+                if (!mScroller.isFinished()) {
                     mScroller.abortAnimation();
                 }
                 mLastX = (int) event.getX();
+                mIsBeingDragged = false;
                 break;
             case MotionEvent.ACTION_MOVE:
                 int dx = (int) (mLastX - event.getX());

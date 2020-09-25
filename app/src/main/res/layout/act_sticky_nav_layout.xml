@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.parting_soul.learn.viewdraw.customview.view.StickyNavLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/sticky_nav_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_color">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_300dp"
+            android:gravity="center"
+            android:text="顶部布局" />
+
+    </LinearLayout>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        app:tl_tab_space_equal="true"
+        android:id="@+id/sticky_nav_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48dp"
+        app:tl_indicator_color="@color/light_blue"
+        app:tl_indicator_width="@dimen/space_20dp"
+        app:tl_textSelectColor="@color/black"
+        app:tl_textUnselectColor="@color/black" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/sticky_nav_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.parting_soul.learn.viewdraw.customview.view.StickyNavLayout>
